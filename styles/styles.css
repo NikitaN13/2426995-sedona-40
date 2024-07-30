@@ -21,46 +21,34 @@ html {
 ul {    list-style-type:  none;  }
 
 body {
-margin: 0 auto;
-min-height: 100%;
+
 font-family: "PT Sans", sans-serif;
 font-size: 18px; 
 line-height: 21px;
 color: #000000;
 background-color: #FFFFFF;
 text-align: center;
-width: 1200px;
-display: flex;
-flex-direction: column;
-height: 100%;
-
 }  
+
 /* Шапка */
 .heder-menu {
-margin: 0 auto;
 width: 1260px;
 display: flex;
 flex-grow: 1;
 flex-direction: column;
 height: 100%;
-
   }
-
   .logo-heder  {
    position:absolute; 
    width: 140px;
    height: 70px;  
-
  }
-
     .navigation-heder-menu {
 display: flex;
 justify-content: space-between;
 margin-left: 168px;
 height: 42px;
-
 }
-
 
 .navigation-heder-list {
 font-size: 20px;
@@ -102,14 +90,11 @@ margin-top: 21px;
     height: 2px;
     background: #756257;
     margin: 0em;
-    
-  }
+      }
 
    .navigation-heder-item:nth-child(1) {
     position: relative;
-    
-
-}
+    }
 
 .navigation-heder-list-2 {
     text-decoration: none; 
@@ -118,8 +103,7 @@ margin-top: 21px;
     justify-content: flex-end;
     width: 267.2px ;
     height: 64px;
-    
-}
+  }
 
 .navigation-link{
 text-decoration: none; 
@@ -129,7 +113,6 @@ font-size: 20px;
 line-height: 24px;
 padding: 20px 16px;
 font-style: normal;
-
 }
 
 .navigation-link-user{
@@ -148,8 +131,6 @@ background-position: center;
 .serch-icon{ 
     background-image: url(../images/icon/search.svg); 
     display: block; 
-
-
 }
 
 .favourite-icon{ 
@@ -186,24 +167,61 @@ font-weight: 700;
 line-height: 20px;
 text-align: center;}
 
-                                    /*  Основное */
-.main-class {
-flex-grow: 1;
-}
 
-.advantages {
-background-image: url(../images/Sedona-background.jpg);
-background-repeat: no-repeat;
-background-size: cover; 
-background-color:  #82B3D3;
-padding: 51px 0 82px;
-margin: 21px;
-}
-.word-sedona {
-display: block;
+                                    /*  Основное */
+
+.body {
+display: grid;
+grid-column: 400px 400px 400px;
+grid-row: 64px 485px 261px 385px 385px 385px 246px 385px 406px 414px 120px;
+
+grid-template-areas: 
+"heder heder heder"
+"img-sedona img-sedona img-sedona "
+" sedonatext sedonatext sedonatext "
+"sity imgsity imgsity"
+"smalS butifulroad samalturist"
+" imgdevil imgdevil textdevil"
+" gosedona gosedona gosedona"
+"home eat box"
+"searchhotel searchhotel searchhotel"
+" email email email"
+"futer futer futer"; 
+max-width: 1200px; 
 margin: 0 auto;
 }
 
+.heder-menu {grid-area: heder ;}
+.advantages {grid-area: img-sedona; }
+.description-bigandsmall{ grid-area: sedonatext;}
+.city-sedona {grid-area:sity ;}
+.street-sedona {grid-area: imgsity ;}
+.in-sedona-1 { grid-area: smalS;}
+.in-sedona-2 { grid-area: butifulroad; }
+.in-sedona-3 { grid-area: samalturist;}
+.imgbrige-devil { grid-area: imgdevil;}
+.bridge-devil{ grid-area:textdevil ;}
+.wellcom-relax { grid-area: gosedona;}
+.gift {grid-area: box;}
+.food {grid-area: eat;}
+.house {grid-area: home;}
+.booking {grid-area: searchhotel ;}
+.subscript {grid-area: email;}
+.basement {grid-area: futer;}
+
+/*Фоновое изображение*/
+.advantages {
+background-image: url(../images/Sedona-background.jpg);
+background-repeat: no-repeat;
+padding: 51px 0 82px;
+margin: 21px;
+width: 1200px;
+}
+/* wellcom sedona */
+.word-sedona {
+display: flex;
+margin-left: 357px;
+}
 .description-sedona-small{
 font-weight: 400;
 font-size: 22px;
@@ -212,16 +230,13 @@ line-height: 26px;
 }
 
 .description-bigandsmall {
-text-align: center;
 font-weight: 700;
 font-size: 30px;
 line-height: 36px;
-text-align: center;
-padding: 69px 270px;
-margin-bottom: 64px 270px;
-width: 1200px;
-}
+margin-left: 0;
+padding: 69px 0px;
 
+}
 
 .description-sedona  {
 width:1,200px;
@@ -283,16 +298,18 @@ margin-left: 60px;
 
 
 /*  Небольшая площадь - Красивая Дорога - Мало туристов  */
+
+
 .in-sedona { 
-display: flex;
+
 align-items: center;
 min-width: 0 auto;
 min-height: 385px;
 justify-content: space-around;
-margin: 0;
+
 
 }
-
+.in-sedona {display: flex; flex-direction: row;}
 .in-sedona-1{
 width: 400px;
 height: 385px;
@@ -338,6 +355,7 @@ width: 60px;
 height: 2px;
 background-color: rgba(0, 0, 0, 0.3);
 
+
 }
   
 
@@ -372,22 +390,16 @@ background-color: rgba(0, 0, 0, 0.3);
     font-size: 30px;
     line-height: 36px;
          }
-
-
-      
-.description-bigandsmall{
-display: flex;
-justify-content: baseline;
-flex-wrap: wrap;
-align-items: end;
+.eat-hotel{ 
+    display: flex; 
+    flex-direction: row;
+max-width: 1200px;
+max-height: 385px;
 
 }
-    .eat-hotel{
-display: flex;
-flex-direction: row; 
-width: 1200px;
-height: 385px ;
-}
+.house-icon, .food-icon, .gift-icon { position: relative; bottom: -100px;}
+
+
 
 .recommendations-sedona {
 background: #83B3D31F;
@@ -542,10 +554,13 @@ align-self: center;
 }
 
 .logo-html { 
-background-image: url(../images/logo_htmlacademy.svg);
+display: block;
+background-image: url(../images/logo_htmlacademy.png);
 width: 115px;
-height: 33 px;
+height: 33px;
 background-repeat: no-repeat;
+position: relative;
+top: -15px;
 
 }
 
